@@ -1,0 +1,8 @@
+// mỗi lần sửa code chỉ cần f5 là update, ko phải start lại port
+yarn add nodemon
+npm install -g nodemon
+nodemon server.js
+
+// 1 file = 1 module 
+
+// export default thì import ko cần { }, trong 1 file JS chỉ có 1 export default và có nhiều export đối tượng
