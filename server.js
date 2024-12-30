@@ -10,7 +10,7 @@ app.use('/users', usersRouter)
 
 // thêm 1 cái root router khi client call đến đường dẫn root , tức là localhost:3002/
 app.get('/', (req, res) => {
-  res.send('respone from root router, haha1234569')
+  res.send('respone from root router, haha1234569222')
 })
 app.listen(port, async() =>{
   console.log(`listening on port: ${port}`)
