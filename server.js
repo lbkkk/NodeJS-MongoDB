@@ -1,16 +1,24 @@
 import express from 'express'
 import * as dotenv from 'dotenv'
-import usersRouter from './routers/users.js'
+import {
+  usersRouter,
+  studentsRouter } from './routers/index.js'
+
 dotenv.config()  // must have, gọi hàm config trong thư viện dotenv
 const app = express()
+
+// middleware
+app.use(express.json())
+
 const port = process.env.PORT || 3000
+
 // router
 app.use('/users', usersRouter)
-
+app.use('/students', studentsRouter)
 
 // thêm 1 cái root router khi client call đến đường dẫn root , tức là localhost:3002/
 app.get('/', (req, res) => {
-  res.send('respone from root router, haha1234569111')
+  res.send('respone from root router, haha123456911123')
 })
 app.listen(port, async() =>{
   console.log(`listening on port: ${port}`)
